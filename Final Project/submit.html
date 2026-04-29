@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HCU</title>
+         <link href="css/master.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+         <img src="images/Copy of HCA banner.png" alt="HCU banner" class="banner">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="submit.html">Submit</a>
+            </li>
+            <li>
+                <a href="status.html">Status</a>
+            </li>
+            <li>
+                <a href="library.html">Library</a>
+            </li>
+        </ul>
+        <div class="SubmitContent">
+            <h1>Submit</h1>
+            <p>
+                Ready to commission your artwork? Use the form below to submit your request. Provide details about the type of art you want, any specific requirements, and your contact information. Our team will review your submission and get back to you shortly!
+            </p>
+
+            <form action="https://httpbin.org/post" method="post" id="submitForm">
+                <div id="formMessage" role="status" aria-live="polite"></div>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <span class="fieldError" id="nameError"></span><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <span class="fieldError" id="emailError"></span><br>
+
+                <label for="artType">Type of Art:</label><br>
+                <select id="artType" name="artType" required>
+                    <option value="digital">Digital</option>
+                    <option value="traditional">Traditional</option>
+                    <option value="3d">3D</option>
+                </select><br>
+                <span class="fieldError" id="artTypeError"></span><br>
+
+                <label for="details">Details/Requirements:</label><br>
+                <textarea id="details" name="details" rows="4" cols="50" required></textarea><br>
+                <span class="fieldError" id="detailsError"></span><br><br>
+
+                <input type="submit" value="Submit Request" id="submitBtn">
+            </form>
+            </div>
+            <script src="Java/submit.js" type="text/javascript"></script>
+    </body>
+</html>
